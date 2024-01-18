@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_tutorial/controller/counter_controller.dart';
 import 'package:flutter_getx_tutorial/page/example1.dart';
+import 'package:flutter_getx_tutorial/page/example2.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: const Example1(),
+      // home: const Example1(),
+      home: const Example2(),
     );
   }
 }
@@ -44,8 +46,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
   CounterController controller = Get.put(CounterController());
 
   @override
@@ -74,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){
+        onPressed: () {
           controller.incrementCounter();
         },
         tooltip: 'Increment',
