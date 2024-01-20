@@ -10,14 +10,24 @@ class AppExceptions implements Exception {
   }
 }
 
-class InternetExceptions extends AppExceptions {
-  InternetExceptions([String? message]) : super('No Internet Connection');
+class InternetException extends AppExceptions {
+  InternetException([String? message]) : super('No Internet Connection');
 }
 
-class RequestTimeoutExceptions extends AppExceptions {
-  RequestTimeoutExceptions([String? message]) : super('Request Timeout');
+class RequestTimeoutException extends AppExceptions {
+  RequestTimeoutException([String? message]) : super('Request Timeout');
 }
 
 class ServerException extends AppExceptions {
   ServerException([String? message]) : super('Internal Server Error');
+}
+
+class BadRequestException extends AppExceptions {
+  BadRequestException([String? message])
+      : super('Invalid or malformed request url');
+}
+
+class UnExpectedException extends AppExceptions {
+  UnExpectedException([String? message])
+      : super('Something went wrong. Please try again later.');
 }
