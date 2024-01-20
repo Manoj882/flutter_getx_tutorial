@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_tutorial/app/res/routes/routes.dart';
 import 'package:flutter_getx_tutorial/controller/counter_controller.dart';
 import 'package:flutter_getx_tutorial/page/example1.dart';
 import 'package:flutter_getx_tutorial/page/example2.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -22,7 +23,9 @@ class MyApp extends StatelessWidget {
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       // home: const Example1(),
-      home: const Example2(),
+      // home: const Example2(),
+
+      getPages: AppRoutes.appRoute(),
     );
   }
 }
